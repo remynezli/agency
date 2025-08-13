@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GlobeTrek Travel</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* Hero with scenic background */
+    .hero {
+      background: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop") center/cover no-repeat;
+      min-height: 60vh; position: relative; color: #fff;
+    }
+    .hero::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.45); }
+    .hero-inner { position: relative; z-index: 1; min-height: 60vh; }
+    /* Card images */
+    .dest-card img { height: 180px; object-fit: cover; }
+    /* Footer hover */
+    footer a { color: inherit; text-decoration: none; }
+    footer a:hover { color: #0d6efd; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg bg-light sticky-top border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">GlobeTrek</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navTravel">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navTravel" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tours">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <header id="hero" class="hero d-flex align-items-center">
+    <div class="container hero-inner text-center">
+      <h1 class="display-5 fw-bold">Find Your Next Adventure</h1>
+      <p class="lead mb-4">Handcrafted trips to breathtaking destinations.</p>
+      <a href="#destinations" class="btn btn-primary btn-lg">Explore Destinations</a>
+    </div>
+  </header>
+
+  <!-- ===== Destinations (Cards Grid) ===== -->
+  <section id="destinations" class="py-5">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Top Destinations</h2>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card dest-card h-100">
+            <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=1400&auto=format&fit=crop" class="card-img-top" alt="Paris">
+            <div class="card-body">
+              <h5 class="card-title">Paris, France</h5>
+              <p class="card-text">Art, romance, and world‑class cuisine.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card dest-card h-100">
+            <img src="https://images.unsplash.com/photo-1466640630965-86b0d6ab3c8e?q=80&w=1400&auto=format&fit=crop" class="card-img-top" alt="Bali">
+            <div class="card-body">
+              <h5 class="card-title">Bali, Indonesia</h5>
+              <p class="card-text">Beaches, temples, and lush greenery.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card dest-card h-100">
+            <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1400&auto=format&fit=crop" class="card-img-top" alt="Swiss Alps">
+            <div class="card-body">
+              <h5 class="card-title">Swiss Alps</h5>
+              <p class="card-text">Snowy peaks and alpine charm.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Tours (Accordion) ===== -->
+  <section id="tours" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Tour Packages</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="toursAccordion">
+            <!-- Item 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="t1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
+                  City Explorer (3 Days)
+                </button>
+              </h2>
+              <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#toursAccordion">
+                <div class="accordion-body">
+                  See iconic landmarks, museums, and hidden gems with a local guide.
+                  <a href="#" class="link-primary ms-1">View Details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="t2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
+                  Beach Retreat (5 Days)
+                </button>
+              </h2>
+              <div id="c2" class="accordion-collapse collapse" data-bs-parent="#toursAccordion">
+                <div class="accordion-body">
+                  Relax on pristine shores with curated activities and spa options.
+                  <a href="#" class="link-primary ms-1">View Details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="t3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3">
+                  Mountain Adventure (7 Days)
+                </button>
+              </h2>
+              <div id="c3" class="accordion-collapse collapse" data-bs-parent="#toursAccordion">
+                <div class="accordion-body">
+                  Trekking, scenic rail rides, and cozy cabins with breathtaking views.
+                  <a href="#" class="link-primary ms-1">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- /accordion -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Form ===== -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Contact Us</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" placeholder="Your name">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="you@example.com">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Destination of Interest</label>
+              <input type="text" class="form-control" placeholder="e.g., Paris, Bali, Alps">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="5" placeholder="Tell us about your trip"></textarea>
+            </div>
+            <div class="col-12 text-end">
+              <button class="btn btn-primary">Send Inquiry</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="py-4 border-top">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <p class="mb-0">&copy; <span id="y"></span> GlobeTrek Travel</p>
+      <div class="d-flex gap-3 fs-5">
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
